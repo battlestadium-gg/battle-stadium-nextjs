@@ -34,7 +34,7 @@ jobs:
         if: always()
         with:
           include_passed: true
-          report_paths: 'test-results/jest/results.xml'
+          report_paths: "test-results/jest/results.xml"
 
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v4.0.1
@@ -50,7 +50,7 @@ jobs:
         uses: codecov/test-results-action@v1
         with:
           directory: test-results
-          files: '**/*.xml'
+          files: "**/*.xml"
           flags: bun
           token: ${{ secrets.CODECOV_TOKEN }}
 
