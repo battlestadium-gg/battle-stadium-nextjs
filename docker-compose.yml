@@ -1,5 +1,5 @@
 services:
-  frontend:
+  nextjs:
     hostname: nextjs-container
     image: thatguyinabeanie/battle-stadium:frontend-dev-latest
     build:
@@ -9,6 +9,7 @@ services:
         - thatguyinabeanie/battle-stadium:frontend-dev-latest
     environment:
       - LOCAL_DEV_BACKEND_HOST=backend
+      - LOCAL_DEV_BACKEND_PORT=10000
     command: >
       zsh -c "rm -rf .next && bun install && bun dev && tail -f /dev/null"
     tty: true
@@ -16,11 +17,14 @@ services:
       - 3000:3000
       - 8080:3000
       - 9229:9229
+    networks:
+      - battle-stadium-network
     volumes:
       - .:/battle-stadium
       - .zshrc:/root/.zshenv
       - .zshrc:/root/.zshrc
 
 networks:
-  battle-stadium:
-    external: true
+  battle-stadium-network:
+    name: battle-stadium-network
+    driver: bridge

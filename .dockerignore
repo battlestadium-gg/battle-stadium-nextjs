@@ -7,3 +7,5 @@ coverage/
 .devcontainer/
 __tests__/
 .env
+.next
+.github
