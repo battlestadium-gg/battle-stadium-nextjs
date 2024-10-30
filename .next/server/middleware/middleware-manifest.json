@@ -1,0 +1,60 @@
+{
+  "sorted_middleware": [],
+  "middleware": {
+    "/": {
+      "files": [
+        "server/edge/chunks/_dd6ffd._.js",
+        "server/edge/chunks/[root of the server]__423df8._.js",
+        "server/edge/chunks/edge-wrapper_82fd60.js"
+      ],
+      "name": "middleware",
+      "page": "/",
+      "matchers": [
+        {
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/((?!_next|[^?]*\\.(?:html?|css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest)).*)(.json)?",
+          "originalSource": "/((?!_next|[^?]*\\.(?:html?|css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest)).*)"
+        },
+        {
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/(api|trpc)(.*)(.json)?",
+          "originalSource": "/(api|trpc)(.*)"
+        }
+      ],
+      "wasm": [],
+      "assets": [
+        {
+          "name": "server/edge/chunks/_dd6ffd._.js.map",
+          "filePath": "server/edge/chunks/_dd6ffd._.js.map"
+        },
+        {
+          "name": "server/edge/chunks/_dd6ffd._.js",
+          "filePath": "server/edge/chunks/_dd6ffd._.js"
+        },
+        {
+          "name": "server/edge/chunks/[root of the server]__423df8._.js.map",
+          "filePath": "server/edge/chunks/[root of the server]__423df8._.js.map"
+        },
+        {
+          "name": "server/edge/chunks/[root of the server]__423df8._.js",
+          "filePath": "server/edge/chunks/[root of the server]__423df8._.js"
+        },
+        {
+          "name": "server/edge/chunks/edge-wrapper_82fd60.js.map",
+          "filePath": "server/edge/chunks/edge-wrapper_82fd60.js.map"
+        },
+        {
+          "name": "server/edge/chunks/edge-wrapper_82fd60.js",
+          "filePath": "server/edge/chunks/edge-wrapper_82fd60.js"
+        }
+      ],
+      "env": {
+        "__NEXT_BUILD_ID": "development",
+        "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "ilotFzfptfxLq6TkbaDbFWfKAsPjcazv9K2XoZ+oJvU=",
+        "__NEXT_PREVIEW_MODE_ID": "38809d16409f8f9d7a16645a1e6d0134",
+        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "748e3909b1b6ccd8cba47293dd705e4d8a14dcea3445b6a8341b70f0ce172202",
+        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "d24e098864be0032441d32523d7ed18d9a0e3e326807efe11b46df3e8df65033"
+      }
+    }
+  },
+  "instrumentation": null,
+  "functions": {}
+}
