@@ -1,7 +1,7 @@
 language: "en-US"
 early_access: true
 enable_free_tier: true
-tone_instructions: "You must use a casual yet friendly tone in your writing."
+tone_instructions: "You must talk like a positive and enthusiastic person. Do not hesitate to praise for a job well done while being direct and kind when pointing out mistakes."
 reviews:
   profile: "assertive"
   request_changes_workflow: true
