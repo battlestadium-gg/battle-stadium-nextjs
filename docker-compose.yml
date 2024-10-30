@@ -1,0 +1,27 @@
+services:
+  frontend:
+    hostname: nextjs-container
+    image: thatguyinabeanie/battle-stadium:frontend-dev-latest
+    build:
+      context: frontend
+      dockerfile: Dockerfile
+      target: development
+      tags:
+        - thatguyinabeanie/battle-stadium:frontend-dev-latest
+    environment:
+      - LOCAL_DEV_BACKEND_HOST=backend
+    command: >
+      zsh -c "rm -rf .next && bun install && bun dev && tail -f /dev/null"
+    tty: true
+    ports:
+      - 3000:3000
+      - 8080:3000
+      - 9229:9229
+    volumes:
+      - .:/battle-stadium
+      - .zshrc:/root/.zshenv
+      - .zshrc:/root/.zshrc
+
+networks:
+  battle-stadium:
+    external: true
