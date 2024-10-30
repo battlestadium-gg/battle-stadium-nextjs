@@ -3,7 +3,6 @@ services:
     hostname: nextjs-container
     image: thatguyinabeanie/battle-stadium:frontend-dev-latest
     build:
-      context: frontend
       dockerfile: Dockerfile
       target: development
       tags:

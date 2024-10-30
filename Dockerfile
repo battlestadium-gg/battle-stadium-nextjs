@@ -2,8 +2,8 @@
 FROM mcr.microsoft.com/vscode/devcontainers/typescript-node:22 AS base-image
 
 # Set the working directory inside the container
-RUN mkdir -p /battle-stadium/frontend
-WORKDIR /battle-stadium/frontend
+RUN mkdir -p /battle-stadium
+WORKDIR /battle-stadium
 
 # Copy package.json and package-lock.json to the working directory
 ENV PORT=3000
