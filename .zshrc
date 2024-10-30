@@ -136,8 +136,8 @@ start_server() {
     export POSTGRES_HOST='localhost'
   fi
 
-  if [ -d "/battle-stadium/frontend/.next" ]; then
-    rm -rf /battle-stadium/frontend/.next
+  if [ -d "/battle-stadium/.next" ]; then
+    rm -rf /battle-stadium/.next
   fi
 
   bun dev
