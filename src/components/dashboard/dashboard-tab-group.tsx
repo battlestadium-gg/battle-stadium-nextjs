@@ -1,6 +1,6 @@
 "use client";
 
-import { DashboardLayoutProps } from "~/src/types";
+import { DashboardLayoutProps } from "~/types";
 import Tabs from "~/components/nextui/tabs";
 import { AccountMe } from "~/lib/api";
 

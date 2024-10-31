@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 import { cn } from "~/lib";
 import { NavbarItem, NavbarItemProps } from "../nextui/client-components";
 import Link from "next/link";
-import { ChildrenProps } from "~/src/types";
+import { ChildrenProps } from "~/types";
 
 interface NavbarLinksProps {
   isSignedIn: boolean | null;

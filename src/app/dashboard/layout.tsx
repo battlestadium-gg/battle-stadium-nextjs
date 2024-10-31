@@ -1,4 +1,4 @@
-import { DashboardLayoutProps } from "~/src/types";
+import { DashboardLayoutProps } from "~/types";
 import { getAccountMe } from "~/app/server-actions/accounts/actions";
 import Dashboard from "~/components/dashboard/dashboard-tab-group";
 

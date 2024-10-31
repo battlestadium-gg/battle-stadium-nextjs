@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 
-import { ChildrenProps } from "~/src/types";
+import { ChildrenProps } from "~/types";
 import { NextUIProvider } from "~/components/nextui/client-components";
 
 export default function Providers({ children }: Readonly<ChildrenProps>) {

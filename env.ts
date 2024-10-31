@@ -12,13 +12,12 @@ export const env = createEnv({
     PROD_API_BASE_URL: z.string().optional(),
     WEBSOCKET_URL: z.string().optional(),
     NEON_DATABASE_URL: z.string().optional(),
-
     LOCAL_DEV_BACKEND_HOST: z.string().optional().default("localhost"),
     LOCAL_DEV_BACKEND_PORT: z.string().optional().default("10000"),
-    NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: z.string(),
+    CLERK_PUBLISHABLE_KEY: z.string(),
     CLERK_SECRET_KEY: z.string(),
-    NEXT_PUBLIC_CLERK_SIGN_IN_URL: z.string().optional().default("/sign-in"),
-    NEXT_PUBLIC_CLERK_SIGN_UP_URL: z.string().optional().default("/sign-up"),
+    CLERK_SIGN_IN_URL: z.string().optional().default("/sign-in"),
+    CLERK_SIGN_UP_URL: z.string().optional().default("/sign-up"),
     EDGE_CONFIG: z.string().url().optional().default("https://edge.clerk.dev"),
     UPLOADTHING_TOKEN: z.string().optional(),
     AUTH_SECRET: z.string({
@@ -66,6 +65,7 @@ export const env = createEnv({
     //   ),
     ROOT_URL: z.string().url("ROOT_URL must be a valid URL").optional().default("http://localhost:10000"),
   },
+  experimental__runtimeEnv: {},
   onInvalidAccess: (error) => {
     throw new Error(`❌ Attempted to access a server-side environment variable on the client: ${error}`);
   },

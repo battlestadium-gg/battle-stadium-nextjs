@@ -1,4 +1,4 @@
-import type { IconSvgProps } from "~/src/types";
+import type { IconSvgProps } from "~/types";
 
 import { FC } from "react";
 import Link from "next/link";

@@ -1,7 +1,7 @@
 import { Link, NavbarMenu, NavbarMenuItem } from "~/components/nextui/client-components";
 
 import NavbarMobileDashboardAccordionMenu from "./navbar-mobile-dashboard-accordion-menu";
-import { NavbarMobileMenuProps } from "~/src/types";
+import { NavbarMobileMenuProps } from "~/types";
 import { SignOutButton } from "@clerk/nextjs";
 import { cn } from "~/lib";
 
