@@ -89,7 +89,7 @@ export const env = createEnv({
     DISCORD_APP_TOKEN: process.env.DISCORD_APP_TOKEN,
     DISCORD_APP_ID: process.env.DISCORD_APP_ID,
     DISCORD_APP_PUBLIC_KEY: process.env.DISCORD_APP_PUBLIC_KEY,
-    ROOT_URL: process.env.ROOT_URL
+    ROOT_URL: process.env.ROOT_URL,
   },
   onInvalidAccess: (error) => {
     throw new Error(`❌ Attempted to access a server-side environment variable on the client: ${error}`);
