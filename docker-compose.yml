@@ -21,8 +21,6 @@ services:
       - battle-stadium-network
     volumes:
       - .:/battle-stadium
-      - .zshrc:/root/.zshenv
-      - .zshrc:/root/.zshrc
 
 networks:
   battle-stadium-network:
