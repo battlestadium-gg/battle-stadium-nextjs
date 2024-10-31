@@ -2,9 +2,6 @@ import { createEnv } from "@t3-oss/env-nextjs";
 import { z } from "zod";
 
 export const env = createEnv({
-  client: {
-    NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: z.string(),
-  },
   server: {
     VERCEL_URL: z.string().optional(),
     VERCEL_ENV: z.string().optional(),
@@ -67,7 +64,33 @@ export const env = createEnv({
     //   ),
     ROOT_URL: z.string().url("ROOT_URL must be a valid URL").optional().default("http://localhost:10000"),
   },
-  experimental__runtimeEnv: {},
+  client: {
+    NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: z.string().min(1),
+  },
+  runtimeEnv: {
+    NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY,
+    VERCEL_URL: process.env.VERCEL_URL,
+    VERCEL_ENV: process.env.VERCEL_ENV,
+    VERCEL_OIDC_TOKEN: process.env.VERCEL_OIDC_TOKEN,
+    COOKIE_DOMAIN: process.env.COOKIE_DOMAIN,
+    NODE_ENV: process.env.NODE_ENV,
+    MEASUREMENT_ID: process.env.MEASUREMENT_ID,
+    PROD_API_BASE_URL: process.env.PROD_API_BASE_URL,
+    WEBSOCKET_URL: process.env.WEBSOCKET_URL,
+    NEON_DATABASE_URL: process.env.NEON_DATABASE_URL,
+    LOCAL_DEV_BACKEND_HOST: process.env.LOCAL_DEV_BACKEND_HOST,
+    LOCAL_DEV_BACKEND_PORT: process.env.LOCAL_DEV_BACKEND_PORT,
+    CLERK_SECRET_KEY: process.env.CLERK_SECRET_KEY,
+    CLERK_SIGN_IN_URL: process.env.CLERK_SIGN_IN_URL,
+    CLERK_SIGN_UP_URL: process.env.CLERK_SIGN_UP_URL,
+    EDGE_CONFIG: process.env.EDGE_CONFIG,
+    UPLOADTHING_TOKEN: process.env.UPLOADTHING_TOKEN,
+    AUTH_SECRET: process.env.AUTH_SECRET,
+    DISCORD_APP_TOKEN: process.env.DISCORD_APP_TOKEN,
+    DISCORD_APP_ID: process.env.DISCORD_APP_ID,
+    DISCORD_APP_PUBLIC_KEY: process.env.DISCORD_APP_PUBLIC_KEY,
+    ROOT_URL: process.env.ROOT_URL
+  },
   onInvalidAccess: (error) => {
     throw new Error(`❌ Attempted to access a server-side environment variable on the client: ${error}`);
   },
