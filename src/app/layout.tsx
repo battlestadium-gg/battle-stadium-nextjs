@@ -10,7 +10,7 @@ import { SpeedInsights as VercelSpeedInsights } from "@vercel/speed-insights/nex
 import { auth } from "@clerk/nextjs/server";
 import { ClerkProvider } from "@clerk/nextjs";
 
-import { env } from "~/env.mjs";
+import { env } from "@/env.ts";
 import { siteConfig } from "~/config/site";
 import { ChildrenProps } from "~/types";
 
