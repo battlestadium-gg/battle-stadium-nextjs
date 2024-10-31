@@ -2,6 +2,9 @@ import { createEnv } from "@t3-oss/env-nextjs";
 import { z } from "zod";
 
 export const env = createEnv({
+  client: {
+    NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: z.string(),
+  },
   server: {
     VERCEL_URL: z.string().optional(),
     VERCEL_ENV: z.string().optional(),
@@ -14,7 +17,6 @@ export const env = createEnv({
     NEON_DATABASE_URL: z.string().optional(),
     LOCAL_DEV_BACKEND_HOST: z.string().optional().default("localhost"),
     LOCAL_DEV_BACKEND_PORT: z.string().optional().default("10000"),
-    CLERK_PUBLISHABLE_KEY: z.string(),
     CLERK_SECRET_KEY: z.string(),
     CLERK_SIGN_IN_URL: z.string().optional().default("/sign-in"),
     CLERK_SIGN_UP_URL: z.string().optional().default("/sign-up"),

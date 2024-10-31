@@ -1,7 +1,7 @@
 import { env } from "@/env.ts";
 
-const DEFAULT_WS_PORT = "10000";
-const DEFAULT_WS_PATH = "/cable";
+const DEFAULT_WS_PORT = "10000" as const;
+const DEFAULT_WS_PATH = "/cable" as const;
 
 const constructWsUrl = (host: string, protocol: string) => `${protocol}://${host}:${DEFAULT_WS_PORT}${DEFAULT_WS_PATH}`;
 
